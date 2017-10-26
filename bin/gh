@@ -12,6 +12,9 @@ Args:
     -p --pulls         Open at pull requests page
     -b --branches      Open at Branches page
     -s --settings      Open at Settings page
+    -c --collaboration Open at Collaboration page
+    -r --releases      Open at Releases page
+    -t --tags          Open at Tags page
     -w --wiki          Open at Wiki
     -i --issues        Open at Issues page
     -d --debug         Enable debug output
@@ -26,6 +29,9 @@ def parse_arguments():
     PARSER.add_argument('-p', '--pulls', help="Open at pull requests page", action='store_true')
     PARSER.add_argument('-b', '--branches', help="Open at Branches page", action='store_true')
     PARSER.add_argument('-s', '--settings', help="Open at Settings page", action='store_true')
+    PARSER.add_argument('-r', '--releases', help="Open at Releases page", action='store_true')
+    PARSER.add_argument('-t', '--tags', help="Open at Tags page", action='store_true')
+    PARSER.add_argument('-c', '--collaboration', help="Open at collaboration page", action='store_true')
     PARSER.add_argument('-w', '--wiki', help="Open at Wiki", action='store_true')
     PARSER.add_argument('-i', '--issues', help="Open at Issues page", action='store_true')
     PARSER.add_argument('-d', '--debug', help="Enable debug output", action='store_true')
@@ -39,6 +45,9 @@ def main():
     pulls = ARGS.pulls
     branches = ARGS.branches
     settings = ARGS.settings
+    releases = ARGS.releases
+    tags = ARGS.tags
+    collaboration = ARGS.collaboration
     wiki = ARGS.wiki
     issues = ARGS.issues
     debug = ARGS.debug
@@ -48,7 +57,7 @@ def main():
         print('gh version: v{}'.format(version_number))
         sys.exit(0)
 
-    count = sum(i == True for i in [pulls, branches, settings, wiki, issues])
+    count = sum(i == True for i in [pulls, branches, settings, releases, tags, collaboration, wiki, issues])
 
     if count > 1: 
         print 'You can only specify one option'
@@ -75,6 +84,12 @@ def main():
         url = url + '/branches'
     elif settings:
         url = url + '/settings'
+    elif releases:
+        url = url + '/releases'
+    elif tags:
+        url = url + '/tags'
+    elif collaboration:
+        url = url + '/settings/collaboration'
     elif wiki:
         url = url + '/wiki'
     elif issues:
