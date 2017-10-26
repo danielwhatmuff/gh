@@ -11,10 +11,16 @@ $ pip install gh
 $ gh --help
 ```
 
-### Open pull requests page
+### Open a projects pull requests page
 ```bash
 $ cd your-repo-dir
 $ gh --pulls
+```
+
+### Open a projects releases page
+```bash
+$ cd your-repo-dir
+$ gh -r
 ```
 
 ## Feel free to fork/PR any contributions
