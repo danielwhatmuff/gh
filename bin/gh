@@ -21,7 +21,7 @@ Args:
     -v --version       Print the installed version of gh
 """
 
-version_number='0.0.2'
+version_number='0.0.3'
 
 def parse_arguments():
     PARSER = argparse.ArgumentParser(description='Github browser opener')

@@ -10,7 +10,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='gh',
-    version='0.0.2',
+    version='0.0.3',
     description='',
     long_description='A CLI to open Github project in a browser',
     url='https://github.com/danielwhatmuff/gh',
