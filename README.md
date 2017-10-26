@@ -1,5 +1,5 @@
 # gh
-#![](https://cdn.travis-ci.com/images/logos/TravisCI-Full-Color-45e242791b7752b745a7ae53f265acd4.png)
+#![](https://github.com/Automattic/social-logos/blob/master/svg-min/github.svg)
 
 ## Overview
 * Install and execute to open a Github repo home page from the command line
