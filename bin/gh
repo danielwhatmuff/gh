@@ -82,6 +82,7 @@ def main():
 
     if debug:
         print 'Current working directory {}'.format(cwd)
+        print 'SSH clone path detected as {}'.format(git_clone_path)
         print 'URL constructed as {}'.format(url)
         print 'Attempting to open browser using the python webbrowser package'
 
