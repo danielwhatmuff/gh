@@ -3,7 +3,8 @@
 
 ## Overview
 * Install and execute to open a Github project in your browser from the command line
-* Run from within a repo directory
+* Useful for command line git users e.g. to push changes and open up a PR `git push origin feature/mything && gh --pulls`
+* Must from within the root directory of a checked out repo
 
 ### Install the CLI and view the available options
 ```bash
