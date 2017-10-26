@@ -23,4 +23,17 @@ $ cd your-repo-dir
 $ gh -r
 ```
 
+### Available options as of 0.0.3
+```
+  --home               Open at the home page (Default action)
+  -p, --pulls          Open at pull requests page
+  -b, --branches       Open at Branches page
+  -s, --settings       Open at Settings page
+  -r, --releases       Open at Releases page
+  -t, --tags           Open at Tags page
+  -c, --collaboration  Open at collaboration page
+  -w, --wiki           Open at Wiki
+  -i, --issues         Open at Issues page
+```
+
 ## Feel free to fork/PR any contributions
