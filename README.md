@@ -13,6 +13,7 @@ $ gh --help
 
 ### Open pull requests page
 ```bash
+$ cd your-repo-dir
 $ gh --pulls
 ```
 
