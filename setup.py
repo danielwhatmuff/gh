@@ -9,7 +9,7 @@ here = path.abspath(path.dirname(__file__))
 
 setup(
     name='gh',
-    version='0.0.3',
+    version='0.0.4',
     description='',
     long_description='A CLI to open Github project in a browser',
     url='https://github.com/danielwhatmuff/gh',
@@ -21,6 +21,8 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
     ],
     keywords='github cli open repo commandline browser',
     py_modules=["gh"],

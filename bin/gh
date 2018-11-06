@@ -20,7 +20,7 @@ Args:
     -v --version       Print the installed version of gh
 """
 
-version_number = '0.0.3'
+version_number = '0.0.4'
 
 
 def parse_arguments():

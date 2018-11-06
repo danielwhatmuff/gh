@@ -14,3 +14,7 @@ History
 0.0.3
 +++++++++++++++++++++++
 * Adding releases, tags, collaboration options
+
+0.0.4
++++++++++++++++++++++++
+* Upgrading to Python 3, cleaning up using flake8
