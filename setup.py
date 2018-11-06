@@ -2,8 +2,7 @@
 Setup.py for gh
 """
 
-from setuptools import setup, find_packages
-from codecs import open
+from setuptools import setup
 from os import path
 
 here = path.abspath(path.dirname(__file__))

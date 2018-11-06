@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import json
 import argparse
 import os
 import sys
@@ -21,7 +20,8 @@ Args:
     -v --version       Print the installed version of gh
 """
 
-version_number='0.0.3'
+version_number = '0.0.3'
+
 
 def parse_arguments():
     PARSER = argparse.ArgumentParser(description='Github browser opener')
@@ -57,10 +57,10 @@ def main():
         print('gh version: v{}'.format(version_number))
         sys.exit(0)
 
-    count = sum(i == True for i in [pulls, branches, settings, releases, tags, collaboration, wiki, issues])
+    count = sum(i is True for i in [pulls, branches, settings, releases, tags, collaboration, wiki, issues])
 
-    if count > 1: 
-        print 'You can only specify one option'
+    if count > 1:
+        print('You can only specify one option')
     elif count == 0:
         home = True
 
@@ -68,8 +68,8 @@ def main():
 
     try:
         Repo(cwd)
-    except:
-        print 'Couldnt detect Git repo, are you executing gh from within the right directory..?'
+    except Exception:
+        print('Couldnt detect Git repo, are you executing gh from within the right directory..?')
         sys.exit(1)
 
     git_clone_path = Repo(cwd).remotes.origin.url
@@ -96,15 +96,16 @@ def main():
         url = url + '/issues'
 
     if debug:
-        print 'Current working directory {}'.format(cwd)
-        print 'SSH clone path detected as {}'.format(git_clone_path)
-        print 'URL constructed as {}'.format(url)
-        print 'Attempting to open browser using the python webbrowser package'
+        print('Current working directory {}'.format(cwd))
+        print('SSH clone path detected as {}'.format(git_clone_path))
+        print('URL constructed as {}'.format(url))
+        print('Attempting to open browser using the python webbrowser package')
 
     try:
         webbrowser.open_new_tab(url)
-    except:
-        print 'Couldnt open the browser.'
+    except Exception:
+        print('Couldnt open the browser.')
+
 
 if __name__ == "__main__":
     main()
